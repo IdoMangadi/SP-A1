@@ -26,3 +26,19 @@ int isStrong (int x)
 
     return (sum == x);
 }
+
+int isPrime (int x)
+{ 
+    if((x <= 0) || ((x%10)/2 == 0)) //Checking if x is negative or even
+    {
+        return 0;
+    }
+    for(int i=3; i<x/2; i=i+2)
+    {
+        if(x%i == 0)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
