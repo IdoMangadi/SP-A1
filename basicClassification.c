@@ -28,15 +28,15 @@ int isStrong (int x)
 
 int isPrime (int x)
 { 
-    if( (x == 1) || (x == 2))
+    if( (x == 1) || (x == 2) || (x == 3))
     {
         return 1;
     }
-    if((x <= 0) || ((x%10)/2 == 0)) //Checking if x is negative or even
+    if((x%10)%2 == 0) //Checking if x is even
     {
         return 0;
     }
-    for(int i=3; i<x/2; i=i+2)
+    for(int i=3; i<=x/2; i=i+2)
     {
         if(x%i == 0)
         {

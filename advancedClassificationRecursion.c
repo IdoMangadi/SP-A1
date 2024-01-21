@@ -23,7 +23,7 @@ int armstrong_sum(int x, int digits_counter)
     if(x == 0){
         return 0;
     }
-    return (power((x%10), digits_counter)) + (power((x/10), digits_counter)); //Handling the last digit aside from the rest.
+    return (power((x%10), digits_counter)) + armstrong_sum(x/10, digits_counter); //Handling the last digit aside from the rest.
 }
 
 int isArmstrong(int x)
@@ -44,7 +44,7 @@ int isPalindrome (int x)
         return ((x%10) == (x/10));
     }
     
-    int inner_x = x % (power(10, digits_counter-1));
+    int inner_x = x % power(10, digits_counter-1);
     inner_x = inner_x/10;
 
     return (((x%10) == (x / power(10, digits_counter-1))) && isPalindrome(inner_x));
