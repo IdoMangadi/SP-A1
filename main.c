@@ -17,7 +17,7 @@ int main()
         num2 = tmp;
     }
 
-    //Printing all the Armstrong numbers between:
+    //Printing:
     printf("The Armstrong numbers are: ");
     for(int i=num1; i<=num2; i++)
     {

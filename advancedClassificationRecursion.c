@@ -33,19 +33,35 @@ int isArmstrong(int x)
     return (sum == x);
 }
 
-int isPalindrome (int x)
+int palindrome_check (int x, int i, int j)
 {
-    int digits_counter = number_of_digits(x);
-    if(digits_counter == 1 )
+    if(i <= j)
     {
         return 1;
     }
-    if(digits_counter == 2){
-        return ((x%10) == (x/10));
+    int digit_in_i = (x / power(10, i-1)) % 10;
+    int digit_in_j = (x / power(10, j-1)) % 10;
+    if (digit_in_i != digit_in_j)
+    {
+        return 0;
     }
-    
-    int inner_x = x % power(10, digits_counter-1);
-    inner_x = inner_x/10;
-
-    return (((x%10) == (x / power(10, digits_counter-1))) && isPalindrome(inner_x));
+    return palindrome_check(x, i-1, j+1);
 }
+
+int isPalindrome (int x)
+{
+    int i = number_of_digits(x);
+    int j = 1;
+    return palindrome_check(x, i, j);
+}
+
+
+
+
+
+
+
+
+
+
+
