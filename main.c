@@ -3,10 +3,10 @@
 
 int main()
 {
-    printf("Enter the first number: ");
+    //printf("Enter the first number: ");
     int num1;
     scanf("%d", &num1);
-    printf("Enter the second number: ");
+    //printf("Enter the second number: ");
     int num2;
     scanf("%d", &num2);
     
@@ -50,6 +50,7 @@ int main()
             printf(" %d", i);
         }
     }
+    printf("\n");
 
     return  0;
 
