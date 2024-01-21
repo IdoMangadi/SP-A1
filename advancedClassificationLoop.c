@@ -60,20 +60,3 @@ int isPalindrome(int x)
     return 1;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,6 @@
 #include <stdio.h> 
+#include "NumClass.h"
 
-#define TRUE 1
-#define FALSE 0
 
 int isStrong (int x)
 {
@@ -29,6 +28,10 @@ int isStrong (int x)
 
 int isPrime (int x)
 { 
+    if( (x == 1) || (x == 2))
+    {
+        return 1;
+    }
     if((x <= 0) || ((x%10)/2 == 0)) //Checking if x is negative or even
     {
         return 0;

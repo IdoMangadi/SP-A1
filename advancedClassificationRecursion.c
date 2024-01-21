@@ -49,10 +49,3 @@ int isPalindrome (int x)
 
     return (((x%10) == (x / power(10, digits_counter-1))) && isPalindrome(inner_x));
 }
-
-
-
-
-
-
-
