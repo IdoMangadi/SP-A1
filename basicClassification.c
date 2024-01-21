@@ -28,7 +28,7 @@ int isStrong (int x)
 
 int isPrime (int x)
 { 
-    if( (x == 1) || (x == 2) || (x == 3))
+    if (x <= 3)
     {
         return 1;
     }
@@ -36,7 +36,7 @@ int isPrime (int x)
     {
         return 0;
     }
-    for(int i=3; i<=x/2; i=i+2)
+    for(int i=3; i*i <=x; i=i+2)
     {
         if(x%i == 0)
         {
