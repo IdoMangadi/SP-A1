@@ -34,7 +34,7 @@ maindrec: main.o
 #main compilation:
 
 main.o: main.c NumClass.h
-	gcc -c main.c NumClass.h -o main.o
+	gcc -c main.c -o main.o
 
 #libraries compilation:
 
@@ -55,13 +55,13 @@ libclassloops.a: basicClassification.o advancedClassificationLoop.o
 #functions compilation:
 
 basicClassification.o: basicClassification.c NumClass.h
-	gcc $(FLAGS) -fPIC -c basicClassification.c NumClass.h -o basicClassification.o
+	gcc $(FLAGS) -fPIC -c basicClassification.c -o basicClassification.o
 
 advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
-	gcc $(FLAGS) -fPIC -c advancedClassificationLoop.c NumClass.h -o advancedClassificationLoop.o
+	gcc $(FLAGS) -fPIC -c advancedClassificationLoop.c -o advancedClassificationLoop.o
 
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
-	gcc $(FLAGS) -fPIC -c advancedClassificationRecursion.c NumClass.h -o advancedClassificationRecursion.o
+	gcc $(FLAGS) -fPIC -c advancedClassificationRecursion.c -o advancedClassificationRecursion.o
 
 
 #clean:
